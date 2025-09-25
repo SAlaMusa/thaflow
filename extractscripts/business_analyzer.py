@@ -20,7 +20,7 @@ class BusinessProcessAnalyzer:
         """Initialize the analyzer with Google Gemini API key."""
         self.api_key = api_key
         genai.configure(api_key=api_key)
-        self.model = genai.GenerativeModel('models/gemini-2.0-flash')
+        self.model = genai.GenerativeModel('gemini-2.0-flash')
 
     def extract_text_from_bytes(self, file_content: bytes, filename: str) -> str:
         """Extract text content from file bytes based on file extension."""

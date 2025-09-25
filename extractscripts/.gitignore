@@ -46,6 +46,10 @@ test_*.txt
 test_meeting.txt
 test_models.py
 test_simple.py
+list_models.py
+test_gemini.py
+test_specific_model.py
+test_transcript.txt
 
 # Output and build files
 build/
