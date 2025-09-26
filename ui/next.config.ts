@@ -8,6 +8,15 @@ const nextConfig: NextConfig = {
   },
   basePath: process.env.NODE_ENV === 'production' ? '/cmuflow' : '',
   assetPrefix: process.env.NODE_ENV === 'production' ? '/cmuflow' : '',
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+      };
+    }
+    return config;
+  },
 };
 
 export default nextConfig;
