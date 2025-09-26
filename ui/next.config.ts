@@ -1,13 +1,13 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: 'export',
+  // Remove output: 'export' for Vercel - it supports full Next.js features
   trailingSlash: true,
   images: {
+    // Vercel supports optimized images, but keep unoptimized for compatibility
     unoptimized: true
   },
-  basePath: process.env.NODE_ENV === 'production' ? '/cmuflow' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/cmuflow' : '',
+  // Remove basePath and assetPrefix - not needed for Vercel
   eslint: {
     ignoreDuringBuilds: true,
   },
